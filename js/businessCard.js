@@ -7,7 +7,7 @@ var dataSource = {
     twitter: 'http://twitter.com/madole',
     facebook: 'http://facebook.com/madole404',
     linkedIn: 'http://linkedin.com/andrew.mcdowell',
-    email: 'madoliole@gmail.com',
+    email: 'mailto:madoliole@gmail.com',
     gravitar: 'https://pbs.twimg.com/profile_images/378800000342584802/a3c1efafd175e220231ef582549abec5_400x400.jpeg'
 };
 
