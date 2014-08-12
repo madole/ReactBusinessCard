@@ -9,17 +9,28 @@
 .name {
     font-family: 'Orbitron', sans-serif;
 }
-.icons {
-    text-decoration: none;
-}
+
 .socialMedia > ul{
     display:inline;
     list-style-type: none;
 }
 .socialMedia * li {
+    text-decoration: none;
     padding-left: 20px;
     padding-right: 20px;
     display:inline;
+}
+.socialMedia * i {
+    color: black;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+.socialMedia * i:hover {
+    color: red;
 }
 /* Buzz */
 @-webkit-keyframes buzz {
