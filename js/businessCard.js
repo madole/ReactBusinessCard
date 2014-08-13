@@ -23,7 +23,7 @@ var iconsList = React.createClass({
                   icons.map(function(icon){
                       var key = Object.keys(icon)[0] ;
                       var classes = "fa fa-" + key + " fa-3x buzz";
-                      var val = '"' + icon[key] + '"';
+                      var val = '' + icon[key] + '';
                       return <li ><a href= {val} ><i className={classes}></i></a></li>;
                   })
               }
