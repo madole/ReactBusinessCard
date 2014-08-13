@@ -10,6 +10,7 @@ var dataSource = {
         {linkedin: 'http://linkedin.com/andrew.mcdowell'},
         {envelope: 'mailto:madoliole@gmail.com'}
     ],
+    blog: 'http://madole.github.io',
     gravitar: 'https://pbs.twimg.com/profile_images/378800000342584802/a3c1efafd175e220231ef582549abec5_400x400.jpeg'
 };
 
@@ -18,13 +19,14 @@ var iconsList = React.createClass({
       var icons = this.props.data.icons;
       return (
           <ul>
-              {icons.map(function(icon){
-                  var key = Object.keys(icon)[0] ;
-                  var keyClass = 'fa-'+Object.keys(icon)[0]+'' ;
-                  var classes = "fa " + keyClass + " fa-3x buzz";
-                  var val = '"' +icon[key] +'"';
-                  return <li ><a href= {val} ><i className={classes}></i></a></li>;
-              })}
+              {
+                  icons.map(function(icon){
+                      var key = Object.keys(icon)[0] ;
+                      var classes = "fa fa-" + key + " fa-3x buzz";
+                      var val = '"' + icon[key] + '"';
+                      return <li ><a href= {val} ><i className={classes}></i></a></li>;
+                  })
+              }
           </ul>
       );
     }
@@ -37,11 +39,12 @@ var BusinessCard = React.createClass({
                 <h2 className = "name">
                     {this.props.data.name}
                 </h2>
-                <img className="meHead" src={this.props.data.gravitar}></img>
+                <img className = "meHead" src={this.props.data.gravitar}></img>
                 <blockquote>{this.props.data.tagline}</blockquote>
                 <div className = "socialMedia">
                     <iconsList data = {this.props.data}/>
-                </div>
+                </div><br/>
+                <div className = "blog"><a href={this.props.data.blog}>{this.props.data.blog}</a></div>
             </div>
             );
     }

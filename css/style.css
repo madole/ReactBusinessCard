@@ -20,7 +20,7 @@
     padding-right: 20px;
     display:inline;
 }
-.socialMedia * i {
+.socialMedia * i, a {
     color: black;
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -29,8 +29,12 @@
     /* ...and now for the proper property */
     transition:.5s;
 }
-.socialMedia * i:hover {
+.socialMedia * i:hover, a:hover {
     color: red;
+}
+
+a {
+    text-decoration: none;
 }
 /* Buzz */
 @-webkit-keyframes buzz {
